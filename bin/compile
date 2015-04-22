@@ -120,3 +120,6 @@ echo "-----> Running extras"
 for file in `ls "$BUILDPACK_DIR"/extra | sort`; do
     . "$BUILDPACK_DIR"/extra/$file
 done
+
+rm -R ./npm/npm-bcrypt/node_modules/bcrypt;
+npm install bcrypt
